@@ -94,15 +94,4 @@ document.querySelector('.previous').addEventListener('click', () => {
 
 
 
-// Function to set all play icons
-const makeAllPlays = () => {
-    Array.from(songItemPlays).forEach((element) => {
-        element.src = "ply1.jpg";
-    });
-};
-document.querySelectorAll('.songItemPlay').forEach(element => {
-    element.addEventListener('click', event => {
-        const clickedId = event.target.id;
-        console.log("Clicked ID:", clickedId);
-    });
-});
+
