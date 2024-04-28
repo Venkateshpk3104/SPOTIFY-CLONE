@@ -92,6 +92,24 @@ document.querySelector('.previous').addEventListener('click', () => {
     makeAllPlays();
 });
 
+//Play and pause of the song when the song is played
+Array.from(document.querySelectorAll('.songItemPlay')).forEach((element, i) => { 
+    element.addEventListener('click', () => {
+        if (audioElement.paused || audioElement.currentTime <= 0) {
+            audioElement.play();
+            masterPlay.setAttribute("src", "pau.svg");
+            document.getElementsByClassName('songItemPlay')[songIndex].setAttribute('src', 'pau1.jpg');
+            gif.style.opacity = 1;
+        } else {
+            audioElement.pause();
+            masterPlay.setAttribute("src", "plyic.svg");
+            Array.from(songItemPlays).forEach(item => item.src = "ply1.jpg");
+            gif.style.opacity = 0;
+        }
+    });
+});
+
+
 
 
 
