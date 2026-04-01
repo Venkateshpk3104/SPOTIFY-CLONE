@@ -2,6 +2,7 @@ console.log("Welcome to Spotify");
 
 // Declaration of the variables
 let songIndex = 0;
+let sing =0
 let res = 0;
 let audioElement = new Audio('./songs/1.mp3');
 let masterPlay = document.getElementById('masterPlay');
